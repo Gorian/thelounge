@@ -405,6 +405,7 @@ module.exports = {
 		tlsOptions: {},
 
 		// - `primaryKey`: LDAP primary key. It is set to `"uid"` by default.
+		// For Active Directory, set this to "sAMAccountName"
 		primaryKey: "uid",
 
 		// - `baseDN`: LDAP base DN, alternative to `searchDN`. For example, set it
@@ -428,6 +429,7 @@ module.exports = {
 
 			//   - `ldapFilter`: it is set to `"(objectClass=person)(memberOf=ou=accounts,dc=example,dc=com)"`
 			//     by default.
+			// For Active Directory, set to "(objectClass=person)"
 			filter: "(objectClass=person)(memberOf=ou=accounts,dc=example,dc=com)",
 
 			//   - `base`: LDAP search base (search only within this node). It is set
